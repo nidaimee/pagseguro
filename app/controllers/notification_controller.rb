@@ -1,4 +1,5 @@
-class NotificationController < ApplicationController skip_before_filter :authenticate_user!, :only => :create
+class NotificationController < ApplicationController
+  action_before_action :authenticate_user!, :only => :create
   protect_from_forgery
   
   def create
